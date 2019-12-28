@@ -1,3 +1,11 @@
 <html>
-	Number of players in game
+	<body>
+		<H3> Welcome {{user.username}}!</H3>
+		<ul>
+		{%for g in games%}
+		<li> {{g.id}} : {{g.first_player}} vs {{g.second_player}}
+		{%endfor%}
+		</ul>
+
+		</body>
 	</html>
