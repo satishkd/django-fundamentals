@@ -1,11 +1,11 @@
-<html>
-	<body>
+{% extends "player/base.html"%}
+{% load static %}
+
+{% block content %}
 		<H3> Welcome {{user.username}}!</H3>
 		<ul>
 		{%for g in games%}
 		<li> {{g.id}} : {{g.first_player}} vs {{g.second_player}}
 		{%endfor%}
 		</ul>
-
-		</body>
-	</html>
+{% endblock %}
